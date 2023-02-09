@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Athena",
+    "breed": "American Curl",
+    "age": "5",
+    "weight": "6",
+    "imgUrl": "/images/cat2.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Apollo",
+    "breed": "Pug",
+    "age": "3",
+    "weight": "4",
+    "imgUrl": "/images/dog2.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Max",
+    "breed": "Shiba",
+    "age": "2",
+    "weight": "5",
+    "imgUrl": "/images/Shiba-Inu.png"
+  },
+  {
+    "id": "4",
+    "name": "Chibi",
+    "breed": "Teddy guinea pig",
+    "age": "1",
+    "weight": "1",
+    "imgUrl": "/images/guinea-pig.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Garfield ll",
+    "breed": "Fat Cat",
+    "age": "2",
+    "weight": "15",
+    "imgUrl": "https://dcist.com/wp-content/uploads/sites/3/2020/02/wilford_newsletter.jpg"
+  }
+]
