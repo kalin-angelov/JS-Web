@@ -1,0 +1,58 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+  
+body {
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+nav {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: #cf3709af;
+    max-height: 5rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: auto;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    background-color: #cf3709af;
+    height: 25px;
+}
