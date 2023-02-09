@@ -1,0 +1,10 @@
+img#sadFaceImg{
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h2, h3{
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+}
