@@ -1,0 +1,16 @@
+<h1>Cat Shelter</h1>
+    <form action="/" method="GET">
+        <input type="text" class="search" name="search" placeholder="Search">
+        <button type="submit">Search</button>
+    </form>
+<section class="cats">
+    <ul>
+        {{#if catsDataBase}}
+            {{#each catsDataBase}}
+                {{>cats}}
+            {{/each}}
+        {{else}}
+            <h1>No results</h1>
+        {{/if}}
+    </ul>
+</section>

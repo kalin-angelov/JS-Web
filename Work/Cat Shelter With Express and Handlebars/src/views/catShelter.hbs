@@ -1,0 +1,13 @@
+<form action="/shelter/cat/{{catInfo._id}}" method="POST" class="cat-form">
+    <h2>Shelter the cat</h2>
+    <img src="{{catInfo.imageUrl}}" alt="some cat">
+    <label for="name">Name</label>
+    <input type="text" id="name" value="{{catInfo.name}}" disabled>
+    <label for="description">Description</label>
+    <textarea id="description" disabled>{{catInfo.description}}</textarea>
+    <label for="group">Breed</label>
+    <select id="group" disabled>
+        <option value="{{catInfo.breed}}">{{catInfo.breed}}</option>
+    </select>
+    <button type="submit">SHELTER THE CAT</button>
+</form>
