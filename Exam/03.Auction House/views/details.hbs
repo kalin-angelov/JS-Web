@@ -1,0 +1,56 @@
+<section id="catalog-section">
+    
+    <h1 class="item">{{offer.title}}</h1>
+    {{#if isOwner}}
+        <a class="action" href="/edit/{{offer._id}}">Edit</a>
+        <a class="action" href="/delete/{{offer._id}}">Delete</a>
+    {{/if}}
+    <div class="item padded">
+        
+        <div class="layout right large">
+
+            <div class="col">
+                <img src="{{offer.image}}" class="img-large">
+            </div>
+
+            <div class="content pad-med">
+
+                <p>In category: <strong>{{offer.category}}</strong></p>
+                <p>{{offer.description}}</p>
+
+                <div class="align-center">
+                    <div>
+                        <p>Current price: $<strong>{{offer.price}}</strong></p>
+                        {{#if isOwner}}
+                            {{#if highestBidder}}
+                                <p>Bid by: <strong>{{highestBidder}}</strong></p>
+                            {{else}}
+                                <p>No bids</p>
+                            {{/if}}
+                            <a class="action" href="/stop/{{offer._id}}">Close Auction</a>
+                        {{/if}}
+                        
+                    </div>
+
+                    {{#if isAuthenticated}}
+                        {{#unless isOwner}}
+                            <form class="vertical" action="/bid/{{offer._id}}" method="POST">
+                                <label><span>Bid amount</span><input type="number" name="bid"></label>
+                                <input class="action" type="submit" value="Place bid">
+                            </form>
+                            {{#if youAreTheHighestBidder}}
+                                <div>
+                                    <p>You are currently the <strong>highest bidder</strong> for this auction</p>
+                                </div>
+                            {{/if}}
+                        {{/unless}}
+                    {{/if}}
+                </div>
+
+            </div>
+        </div>
+
+        <footer>Listed by Peter Jackson</footer>
+    </div>
+
+</section>
