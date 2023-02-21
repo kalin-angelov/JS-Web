@@ -1,0 +1,46 @@
+<section id="details-page">
+    <article class="details-gage-title">
+        <h1>Details Page</h1>
+    </article>
+    <article class="details-page-card">
+            <article class="details-page-card-image">
+                <img src="/img/man.png" alt="details-image">
+            </article>
+
+            <article class="details-page-card-content">
+                <p>Author: {{email}}</p>
+                <h2>Headline: {{offer.headline}}</h2>
+                <h3>Company name: {{offer.name}}</h3>
+                <h4>Company description: {{offer.description}}</h4>
+                <h5>Location: {{offer.description}}</h5>
+
+                <article class="details-page-card-buttons">
+                    {{#if isAuthenticated}}
+                        {{#if isOwner}}
+                            <a href="/edit/{{offer._id}}" class="btn-edit">Edit</a>
+                            <a href="/delete/{{offer._id}}" class="btn-delete">Delete</a>
+                        {{/if}}
+                        {{#unless isOwner}}
+                            {{#unless apply}}
+                                <a href="/apply/{{offer._id}}" class="btn-apply">Apply now!</a>
+                                <p class="applied-people">Hurry up, {{people}} people have already applied.</p>
+                            {{else}}
+                                <p class="already-applied">You have already applied!</p>
+                            {{/unless}}
+                        {{/unless}}
+                    {{/if}}
+                </article>
+            </article>
+    </article>
+</section>
+
+{{#if isOwner}}
+    {{#if appliedPeople}}
+        <section id="info-about-candidates">
+            <h2>Candidates for this ad:</h2>
+            {{#each appliedPeople}}
+                {{>appliedList}}
+            {{/each}}
+        </section>
+    {{/if}}
+{{/if}}

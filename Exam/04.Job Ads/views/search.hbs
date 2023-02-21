@@ -1,0 +1,21 @@
+<form class="search" method="POST">
+    <input type="search" name="search" value="{{search}}" placeholder="Search email...">
+    <button type="submit" class="btn-search">
+        <img src="/img/search-icon.png" alt="search-icon">
+        Search
+    </button>
+</form>
+
+<section id="search-page">
+    {{#if result}}
+        <h2>Search result:</h2>
+        {{#each result}}
+            {{>searchResults}}
+        {{/each}}
+    {{else}}
+        <article class="search-page-no-result">
+            <p class="search-page-no-result-message">No match found.</p>
+        </article>
+    {{/if}}
+
+</section>
